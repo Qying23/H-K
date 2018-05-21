@@ -10,13 +10,31 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <style>
+    .navbar-inverse {
+     background-color: white;
+     border-color: white;
+  }
+
+  .navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, .navbar-inverse .navbar-nav>.active>a:hover {
+    color: #0A2068;
+    background-color: #FF8A0D;
+
+  }
+
+  .navbar-inverse .navbar-nav>li>a:hover {
+    color: #0A2068;
+  }
+  
+  </style>
 </head>
 
 <body data-spy="scroll" data-target=".navbar" data-offset="50">
 <section id="section1"> 
 <nav class="navbar navbar-inverse navbar-fixed-top">
   <img class="navbar-brand" id="png" src="logo.png" alt="">
-  <div class="container-fluid">
+
     <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
           <span class="icon-bar"></span>
@@ -24,7 +42,7 @@
           <span class="icon-bar"></span>                        
       </button>
 
-    </div>
+
     <div>
 
       <div class="collapse navbar-collapse" id="myNavbar">
@@ -37,16 +55,47 @@
     </div>
   </div>
 </nav> 
-</section>   
+</section> 
+  
 
-<div class="w3-content w3-section">
 
-  <img class="mySlides" src="img/banner_shop.jpg" style="width:100%">
 
-  <img class="mySlides" src="img/banner_rabatt.png" style="width:100%">
+<section>
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
 
-  <img class="mySlides" src="img/banner_3.jpg" style="width:100%">
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+      <div class="item active">
+        <img src="img/banner_3.jpg" alt=" " style="width:100%;">
+      </div>
+
+      <div class="item">
+        <img src="img/banner_rabatt.png" alt=" " style="width:100%;">
+      </div>
+    
+      <div class="item">
+        <img src="img/banner_shop.jpg" alt=" " style="width:100%;">
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+      <span class="sr-only">Next</span>
+    </a>
   </div>
+  </section>
+
 
 
 
