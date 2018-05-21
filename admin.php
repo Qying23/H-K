@@ -1,5 +1,16 @@
-<?php require_once 'Allerlei/actions/db_connect.php'; ?>
-
+<?php
+	ob_start();
+	session_start();
+	require_once 'connect.php';
+	// if session is not set this will redirect to login page
+	if( !isset($_SESSION['user']) ) {
+		header("Location: login.php");
+		exit;
+	}
+	// select logged-in users detail
+	$res=mysqli_query($conn, "SELECT * FROM admin WHERE adminId=".$_SESSION['user']);
+	$userRow=mysqli_fetch_array($res, MYSQLI_ASSOC);
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,25 +26,46 @@
 
 </head>
 <body>
+	
+	<header id="header" class="">
+		<div>
+			<nav class="navbar navbar-expand-md bg-info navbar-dark">
+		      <a class="navbar-brand name" >
+		        <h2 class="shop">我的小店</h2>
+		      </a>
+		      <div class="">
+		        <ul class="navbar-nav">
+		          <li class="nav-item">
+		          	 <a class="navbar-right" href="#">你好 <?php echo $userRow['userEmail']; ?></a>
+		          </li>
+		          <li>
+		          	<a class="sign" href="logout.php?logout">退出</a>
+		          </li>
+		        </ul>
+		  
+		      </div>  
+		    </nav>
+		</div>
+	</header><!-- /header -->
 
 	<div class="container">
-		<h2>Allerlei</h2>
-	    <a href="Allerlei/create.php"><button type="button" class="btn btn-primary">Add Product in Allerlei</button></a>
+		<h2>Allerlei / 个种小东西</h2>
+	    <a href="Allerlei/create.php"><button type="button" class="btn btn-primary">添加产品</button></a>
 	    <table class="table">
 	        <thead>
 	            <tr>
-	                <th>Name</th>
-	                <th>Beschreibung</th>
-	                <th>Foto</th>
-	                <th>Alter Preis</th>
-	                <th>Neuer Preis</th>
+	                <th>名字</th>
+	                <th>描述</th>
+	                <th>照片</th>
+	                <th>老价</th>
+	                <th>新价</th>
 	            </tr>
 	        </thead>
 	        <tbody>
 				<?php
 
 		            $sql = "SELECT * FROM allerei";
-		            $result = $connect->query($sql);
+		            $result = $conn->query($sql);
 
 		            if($result->num_rows > 0) {
 		                while($row = $result->fetch_assoc()) {
@@ -58,23 +90,23 @@
 
 	<!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 
-	    <h2>Deko</h2>
-	    <a href="Deko/create.php"><button type="button" class="btn btn-primary">Add Product in Deko</button></a>
+	    <h2>Deko / 装饰</h2>
+	    <a href="Deko/create.php"><button type="button" class="btn btn-primary">添加产品</button></a>
 	    <table class="table">
 	        <thead>
 	            <tr>
-	                <th>Name</th>
-	                <th>Beschreibung</th>
-	                <th>Foto</th>
-	                <th>Alter Preis</th>
-	                <th>Neuer Preis</th>
+	                <th>名字</th>
+	                <th>描述</th>
+	                <th>照片</th>
+	                <th>老价</th>
+	                <th>新价</th>
 	            </tr>
 	        </thead>
 	        <tbody>
 				<?php
 
 		            $sql = "SELECT * FROM deko";
-		            $result = $connect->query($sql);
+		            $result = $conn->query($sql);
 
 		            if($result->num_rows > 0) {
 		                while($row = $result->fetch_assoc()) {
@@ -99,23 +131,23 @@
 
 	<!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 
-	    <h2>Dicount</h2>
-	    <a href="diskont/create.php"><button type="button" class="btn btn-primary">Add Product in Discount</button></a>
+	    <h2>Dicount / 折扣</h2>
+	    <a href="diskont/create.php"><button type="button" class="btn btn-primary">添加产品</button></a>
 	    <table class="table">
 	        <thead>
 	            <tr>
-	                <th>Name</th>
-	                <th>Beschreibung</th>
-	                <th>Foto</th>
-	                <th>Alter Preis</th>
-	                <th>Neuer Preis</th>
+	                <th>名字</th>
+	                <th>描述</th>
+	                <th>照片</th>
+	                <th>老价</th>
+	                <th>新价</th>
 	            </tr>
 	        </thead>
 	        <tbody>
 				<?php
 
 		            $sql = "SELECT * FROM diskont";
-		            $result = $connect->query($sql);
+		            $result = $conn->query($sql);
 
 		            if($result->num_rows > 0) {
 		                while($row = $result->fetch_assoc()) {
@@ -140,23 +172,23 @@
 
 	<!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 
-	    <h2>Haushalt</h2>
-	    <a href="haushalt/create.php"><button type="button" class="btn btn-primary">Add Product in Haushalt</button></a>
+	    <h2>Haushalt / 家庭用品</h2>
+	    <a href="haushalt/create.php"><button type="button" class="btn btn-primary">添加产品</button></a>
 	    <table class="table">
 	        <thead>
 	            <tr>
-	                <th>Name</th>
-	                <th>Beschreibung</th>
-	                <th>Foto</th>
-	                <th>Alter Preis</th>
-	                <th>Neuer Preis</th>
+	                <th>名字</th>
+	                <th>描述</th>
+	                <th>照片</th>
+	                <th>老价</th>
+	                <th>新价</th>
 	            </tr>
 	        </thead>
 	        <tbody>
 				<?php
 
 		            $sql = "SELECT * FROM haushalt";
-		            $result = $connect->query($sql);
+		            $result = $conn->query($sql);
 
 		            if($result->num_rows > 0) {
 		                while($row = $result->fetch_assoc()) {
@@ -181,23 +213,23 @@
 
 	<!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 
-	    <h2>Kleidung</h2>
-	    <a href="kleidung/create.php"><button type="button" class="btn btn-primary">Add Product in Kleidung</button></a>
+	    <h2>Kleidung / 衣服</h2>
+	    <a href="kleidung/create.php"><button type="button" class="btn btn-primary">添加产品</button></a>
 	    <table class="table">
 	        <thead>
 	            <tr>
-	                <th>Name</th>
-	                <th>Beschreibung</th>
-	                <th>Foto</th>
-	                <th>Alter Preis</th>
-	                <th>Neuer Preis</th>
+	                <th>名字</th>
+	                <th>描述</th>
+	                <th>照片</th>
+	                <th>老价</th>
+	                <th>新价</th>
 	            </tr>
 	        </thead>
 	        <tbody>
 				<?php
 
 		            $sql = "SELECT * FROM kleidung";
-		            $result = $connect->query($sql);
+		            $result = $conn->query($sql);
 
 		            if($result->num_rows > 0) {
 		                while($row = $result->fetch_assoc()) {
@@ -222,23 +254,23 @@
 
 	<!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 
-	    <h2>Spielzeug</h2>
-	    <a href="spielzeug/create.php"><button type="button" class="btn btn-primary">Add Product in Spielzeug</button></a>
+	    <h2>Spielzeug / 玩具</h2>
+	    <a href="spielzeug/create.php"><button type="button" class="btn btn-primary">添加产品</button></a>
 	    <table class="table">
 	        <thead>
 	            <tr>
-	                <th>Name</th>
-	                <th>Beschreibung</th>
-	                <th>Foto</th>
-	                <th>Alter Preis</th>
-	                <th>Neuer Preis</th>
+	                <th>名字</th>
+	                <th>描述</th>
+	                <th>照片</th>
+	                <th>老价</th>
+	                <th>新价</th>
 	            </tr>
 	        </thead>
 	        <tbody>
 				<?php
 
 		            $sql = "SELECT * FROM spielzeug";
-		            $result = $connect->query($sql);
+		            $result = $conn->query($sql);
 
 		            if($result->num_rows > 0) {
 		                while($row = $result->fetch_assoc()) {
@@ -263,23 +295,23 @@
 
 	<!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 
-	    <h2>Taschen & Schuhe</h2>
-	    <a href="taschen/create.php"><button type="button" class="btn btn-primary">Add Product in Taschen</button></a>
+	    <h2>Taschen & Schuhe / 包和鞋</h2>
+	    <a href="taschen/create.php"><button type="button" class="btn btn-primary">添加产品</button></a>
 	    <table class="table">
 	        <thead>
 	            <tr>
-	                <th>Name</th>
-	                <th>Beschreibung</th>
-	                <th>Foto</th>
-	                <th>Alter Preis</th>
-	                <th>Neuer Preis</th>
+	                <th>名字</th>
+	                <th>描述</th>
+	                <th>照片</th>
+	                <th>老价</th>
+	                <th>新价</th>
 	            </tr>
 	        </thead>
 	        <tbody>
 				<?php
 
 		            $sql = "SELECT * FROM taschen";
-		            $result = $connect->query($sql);
+		            $result = $conn->query($sql);
 
 		            if($result->num_rows > 0) {
 		                while($row = $result->fetch_assoc()) {
@@ -305,3 +337,6 @@
 
 </body>
 </html>
+
+
+<?php ob_end_flush(); ?>
