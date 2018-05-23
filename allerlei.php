@@ -16,6 +16,63 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <style>
+  
+/*NavBar*/
+.navbar-inverse .navbar-nav>li>a{
+  color: #DDDDDD;
+  font-size: 15pt;
+  font-family: 'Merriweather', serif;
+  margin-top: 30px;
+  margin-left: 80px;
+  } 
+
+.navbar-inverse {
+  background-color: #fff;
+  border-color: #fff;
+  }
+
+.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, .navbar-inverse .navbar-nav>.active>a:hover {
+  color: #0A2068;
+  background-color: #FF8A0D;
+  }
+
+.navbar-inverse .navbar-nav>li>a:hover {
+  color: #0A2068;
+  }
+
+.navbar-toggle {
+  position: relative;
+  float: right;
+  padding: 9px 10px;
+  margin-top: 40px;
+  margin-right: 15px;
+  margin-bottom: 8px;
+  background-color: transparent;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px; 
+  }
+
+
+.navbar-inverse .navbar-toggle {
+  border-color: orange;
+  }
+
+.navbar-inverse .navbar-toggle {
+  border-color: #0A2068;
+  }
+
+.navbar-inverse .navbar-toggle .icon-bar {
+  background-color: #FF8A0D;
+
+  }
+
+.navbar-inverse .navbar-toggle:focus, .navbar-inverse .navbar-toggle:hover {
+  background-color: #fff;
+  }
+</style>
 </head>
 
 <body data-spy="scroll" data-target=".navbar" data-offset="50">
