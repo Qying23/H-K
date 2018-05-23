@@ -1,5 +1,8 @@
 <?php
-require_once 'spielzeug/actions/db_connect.php';
+  require_once 'spielzeug/actions/db_connect.php';
+
+  $sql= "SELECT * FROM spielzeug Order by sId DESC";
+  $result = mysqli_query($connect, $sql);
 ?>
 
 <!DOCTYPE html>
@@ -43,9 +46,38 @@ require_once 'spielzeug/actions/db_connect.php';
 </nav> 
 </section>   
 
-<div>
-	
-</div>
+<div class="container">
+    <div class="row">
+      <?php 
+        while ($row = mysqli_fetch_assoc($result)) {
+          echo 
+            "<div class='col-md-4 col-lg-4 col-4 col'>
+              <div class='kard'>
+                <div class='plac_img'>
+                  <img src='img/".$row["Foto"]."' class='images'>
+                </div>
+                <div>
+                  <h3>".$row["hName"]."</h3>
+                  <p>".$row["beschreibung"]."</p>";
+                  if($row["alterPreis"]>0){
+                    echo "<p>".$row["alterPreis"]."</p>
+                    
+                  <p>".$row["neuerPreis"]."</p>
+                </div>
+              </div>
+            </div>";
+                  }else{
+                    echo "<p>".$row["neuerPreis"]."</p>
+                </div>
+              </div>
+            </div>";
+                  };
+                  
+        };
+      ?>
+      
+    </div>
+  </div>
 
 <hr>
   
