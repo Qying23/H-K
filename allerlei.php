@@ -35,9 +35,9 @@
 
       <div class="collapse navbar-collapse" id="myNavbar">
         <ul class="nav navbar-nav">
-          <li><a href="#section1">Home</a></li>
-          <li><a href="#section2">Unser Sortiment</a></li>
-          <li><a href="#section3">Kontakt</a></li>
+          <li><a href="index.php">Home</a></li>
+          <li><a href="index.php#section2">Unser Sortiment</a></li>
+          <li><a href="index.php#section3">Kontakt</a></li>
         </ul>
       </div>
     </div>
