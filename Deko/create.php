@@ -13,48 +13,74 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <style type="text/css">
-        fieldset {
-            margin: auto;
-            margin-top: 100px;
-            width: 50%;
-        }
+        body{
+  		background-color:#e1f4f5;
+		}
+		fieldset {
+		    margin: auto;
+		    margin-top: 100px;
+		    width: 50%;
+		}
 
-        table tr th {
-            padding-top: 20px;
-        }
-    </style>
+		table tr th {
+		    padding-top: 20px;
+		}
+
+		table {
+		  font-family: arial, sans-serif;
+		  border-collapse: collapse;
+		  width: 100%;
+		}
+
+		td, th {
+		    border: 1px solid white;
+		    text-align: left;
+		    padding: 8px;
+		    width: 20%;
+		    background-color: white;
+		    text-align: center;      
+		  }
+		  th{
+		    color: grey;
+		  }
+		button{
+		    font-size: 20px;
+		    border-radius: 5px;
+		    
+		}
+		</style>
 </head>
 <body>
 
 	<fieldset>
 
-	    <legend>Add Product</legend>
+	    <legend>加产品</legend>
 
 	    <form action="actions/a_create.php" method="post">
 	        <table class="table">
 	            <tr>
-	                <th>Name</th>
-	                <td><input type="text" name="hName" placeholder="Name" /></td>
+	                <th>名字</th>
+	                <td><input type="text" name="hName" placeholder="名字" /></td>
 	            </tr>     
 	            <tr>
-	                <th>Beschreibung</th>
-	                <td><input type="text" name="beschreibung" placeholder="Beschreibung" /></td>
+	                <th>描述产品</th>
+	                <td><input type="text" name="beschreibung" placeholder="描述产品" /></td>
 	            </tr>
 	            <tr>
-	                <th>Foto</th>
+	                <th>照片</th>
 	                <td><input type="text" name="Foto" placeholder=".jpg/.png" /></td>
 	            </tr>
 	            <tr>
-	                <th>Alter Preis</th>
+	                <th>老价</th>
 	                <td><input type="text" name="alterPreis" placeholder="Alter Preis" /></td>
 	            </tr>
 	            <tr>
-	                <th>Neuer Preis</th>
+	                <th>新价</th>
 	                <td><input type="text" name="neuerPreis" placeholder="Neuer Preis" /></td>
 	            </tr>
 	            <tr>
-	                <td><button type="submit" class="btn">Insert Product</button></td>
-	                <td><a href="../admin.php"><button type="button" class="btn">Back</button></a></td>
+	                <td><button type="submit" class="btn">加入产品</button></td>
+	                <td><a href="../admin.php"><button type="button" class="btn">回去</button></a></td>
 	            </tr>
 	        </table>
 	    </form>
