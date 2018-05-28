@@ -99,6 +99,7 @@
       <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
       <li data-target="#myCarousel" data-slide-to="1"></li>
       <li data-target="#myCarousel" data-slide-to="2"></li>
+      <li data-target="#myCarousel" data-slide-to="3"></li>
     </ol>
 
     <!-- Wrapper for slides -->
@@ -108,11 +109,15 @@
       </div>
 
       <div class="item">
-        <img src="img/banner_rabatt.png" alt=" " style="width:100%;">
+        <img src="img/banner_ohne.jpg" alt=" " style="width:100%;">
       </div>
     
       <div class="item">
         <img src="img/banner_shop.jpg" alt=" " style="width:100%;">
+      </div>
+
+      <div class="item">
+        <img src="img/banner_shop2.jpg" alt=" " style="width:100%;">
       </div>
     </div>
 
@@ -172,7 +177,7 @@
         </div>
         <!-- ImageGrid6-->
         <a href="spielzeug.php">
-        <div class="tile" style="background-image: url('https://images.unsplash.com/photo-1520627977056-c307aeb9a625?ixlib=rb-0.3.5&s=2ab376d82b5e0eac2b5283be90fd1aaa&auto=format&fit=crop&w=500&q=60');">
+        <div class="tile" style="background-image: url('https://unsplash.com/photos/y_CSTKJ0bEs');">
           <div class="textWrapper"><h2>Drogerie & Kosmetik</h2>
             <div class="content">Wir achten auf Sie</div>
           </div></a>
