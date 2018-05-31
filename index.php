@@ -135,7 +135,7 @@
 <hr>
 <section id="section2"> <!-- Section2-->
   <div id="sortiment" class="text-center">
-    <p>Unser Sortiment - Simply Everthing<p> <!-- Headline-->
+    <p>Unser Sortiment - Simply Everything<p> <!-- Headline-->
       <hr>
         <div class="imageGrid"><!-- ImageGrid1-->
 
