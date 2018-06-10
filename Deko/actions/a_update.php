@@ -14,9 +14,8 @@ require_once 'db_connect.php';
 	    $sql = "UPDATE deko SET hName = '$name', beschreibung = '$beschreibung', Foto = '$foto', alterPreis = '$alterPreis', neuerPreis = '$neuerPreis' WHERE dId = {$dId}";
 
 	    if($connect->query($sql) === TRUE) {
-	        echo "<p>Succcessfully Updated</p>";
-	        echo "<a href='../update.php?id=".$dId."'><button type='button'>Back</button></a>";
-	        echo "<a href='../../admin.php'><button type='button'>Home</button></a>";
+	        echo "<p>成功更新</p>";
+	        echo "<a href='../update.php?id=".$dId."'><button type='button'>回去</button></a>";
 	    } else {
 	        echo "Erorr while updating record : ". $connect->error;
 	    }

@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css?family=Merriweather" );
+
+
+
+
+  #contact p {
+    font-size: 30px;
+    font-family: 'Merriweather', serif;
+    font-weight: 600;
+    color: #0A2068;
+}
+
+  #sortiment p {
+    font-size: 30px;
+    font-family: 'Merriweather', serif;
+    font-weight: 600;
+    color: #0A2068;
+}
+
+.navbar-toggle {
+    position: relative;
+    float: right;
+    padding: 5px 5px;
+    margin-top: 18px;
+    margin-right: 15px;
+    margin-bottom: 8px;
+    background-color: #FF8A0D;
+    
+  }
+
+  .navbar-toggle {
+    border-radius: 0px;
+  }
+
+
+
+.navbar-inverse .navbar-nav>li>a{
+    color: #DDDDDD;
+    font-size: 15pt;
+    font-family: 'Merriweather', serif;
+    margin-top: 30px;
+}
+
+
+#png{
+  width: 200px;
+  position: relative;
+  height: 120px;
+  margin-left: 45px;
+  margin-bottom: 12px;
+}
+
+hr { 
+    width: 200px; 
+    height: 5px; 
+    margin: 0 auto;
+    color: blue;
+    background: #dfac20;
+}
+
+.imageGrid {
+  line-height: 0;
+  margin-bottom : 50px;
+}
+.imageGrid .tile {
+  width:33.33%;
+  min-height:20em;
+  line-height: 1.2;
+  display:inline-block;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  position: relative;
+  color:#fff;
+  text-shadow: 2px 2px 2px #000;
+  cursor: pointer; 
+  cursor: hand;
+}
+
+.imageGrid .tile:before {
+  content: '';
+  background-color: rgba(15,15,15,0.5);
+  display: block;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  position: absolute;
+}
+
+.imageGrid .tile:hover:before {
+  display: none;
+}
+
+.imageGrid .tile .textWrapper {
+  text-align: center;
+  vertical-align: middle;
+  width: 80%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: .75em;
+  font-family: 'Merriweather', serif;
+
+}
+
+.imageGrid .tile .textWrapper .content {
+  display: none;
+}
+
+.imageGrid .tile:hover .textWrapper .content {
+  display: block;
+}
+
+.imageGrid .tile:hover .textWrapper .content h2 {
+  margin: 0;
+}
+
+@media (max-width: 1000px) {
+  .imageGrid .tile {
+    width: 50%;
+  }
+}
+ 
+@media (max-width: 700px) {
+  .imageGrid .tile {
+    width: 100%;
+  }
+  
+}
+
+
+
+.mySlides {
+  display:none;
+  height: 650px;
+  margin-bottom: 50px;
+
+;
+
+
+}
+#copyright {
+    font-size: 14px;
+    text-align: center;
+}
+
+
+
+
+

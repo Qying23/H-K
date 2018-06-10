@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
 
   <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -73,7 +73,7 @@
 <body data-spy="scroll" data-target=".navbar" data-offset="50">   <!-- scrollspy-->
 <section id="section1"> <!-- Section1-->
   <nav class="navbar navbar-inverse navbar-fixed-top"><!-- begin of navbar-->
-    <img class="navbar-brand" id="png" src="img/newLogo.png" alt=""><!-- Logo-->
+    <img class="navbar-brand" id="png" src="logo.png" alt=""><!-- Logo-->
       <div class="navbar-header"> <!-- toggle-->
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
           <span class="icon-bar"></span>
@@ -99,7 +99,6 @@
       <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
       <li data-target="#myCarousel" data-slide-to="1"></li>
       <li data-target="#myCarousel" data-slide-to="2"></li>
-      <li data-target="#myCarousel" data-slide-to="3"></li>
     </ol>
 
     <!-- Wrapper for slides -->
@@ -109,15 +108,11 @@
       </div>
 
       <div class="item">
-        <img src="img/banner_ohne.jpg" alt=" " style="width:100%;">
+        <img src="img/banner_rabatt.png" alt=" " style="width:100%;">
       </div>
     
       <div class="item">
         <img src="img/banner_shop.jpg" alt=" " style="width:100%;">
-      </div>
-
-      <div class="item">
-        <img src="img/banner_shop2.jpg" alt=" " style="width:100%;">
       </div>
     </div>
 
@@ -135,7 +130,7 @@
 <hr>
 <section id="section2"> <!-- Section2-->
   <div id="sortiment" class="text-center">
-    <p>Unser Sortiment - Simply Everything<p> <!-- Headline-->
+    <p>Unser Sortiment - Simply Everthing<p> <!-- Headline-->
       <hr>
         <div class="imageGrid"><!-- ImageGrid1-->
 
@@ -177,18 +172,18 @@
         </div>
         <!-- ImageGrid6-->
         <a href="spielzeug.php">
-        <div class="tile" style="background-image: url('https://unsplash.com/photos/y_CSTKJ0bEs');">
-          <div class="textWrapper"><h2>Drogerie & Kosmetik</h2>
-            <div class="content">Wir achten auf Sie</div>
+        <div class="tile" style="background-image: url('https://images.unsplash.com/photo-1520627977056-c307aeb9a625?ixlib=rb-0.3.5&s=2ab376d82b5e0eac2b5283be90fd1aaa&auto=format&fit=crop&w=500&q=60');">
+          <div class="textWrapper"><h2>Spielware</h2>
+            <div class="content">Die kleinen unter uns haben wir nicht vergessen</div>
           </div></a>
         </div>
         <!-- ImageGrid7-->
-        <!-- <a href="diskont.php">
+        <a href="diskont.php">
         <div class="tile" style="background-image: url('https://images.unsplash.com/photo-1521404567986-a2c39cde0c31?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=61f97ebaf62873b70a31e991c1fa6264&auto=format&fit=crop&w=500&q=60');">
           <div class="textWrapper"><h2>Diskont</h2>
             <div class="content">Profitieren Sie von unseren täglichen Aktionen</div>
           </div></a>
-        </div> -->
+        </div>
   </div>
 </section>
 <hr>
@@ -200,7 +195,7 @@
     </div>
       <div id="map" class="col-xs-8 col-md-6 col-md-offset-0"></div> <!--google maps-->
         <iframe width="100%" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=Simmeringer%20Hauptstra%C3%9Fe%2087%2C%20Wien%2C%20%C3%96sterreich&key=AIzaSyAnWEdgT_NyNTrsVCItUghUdjCpbcubX3k" allowfullscreen></iframe>        <div align="center">
-          <span class="glyphicon glyphicon-home"></span><p style="font-weight:700; color: #0A2068; ">Asiatown internet und online Dienste GmbH</p>
+          <span class="glyphicon glyphicon-home"></span><p style="font-weight:700; color: #0A2068; ">H & K Shop</p>
           <span class="glyphicon glyphicon-map-marker"></span><p>Simmeringer Hauptstraße 87, 1110 Wien</p>  
            <span class=" glyphicon glyphicon-earphone"></span><p>+43 699 198 402 0</p>  
     </div>

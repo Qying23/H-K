@@ -14,9 +14,9 @@
 	    $sql = "INSERT INTO taschen (hName, beschreibung, Foto, alterPreis, neuerPreis) VALUES ('$name', '$beschreibung', '$foto', '$alterPreis', '$neuerPreis')";
 
 	    if($connect->query($sql) === TRUE) {
-	        echo "<p>New Record Successfully Created</p>";
-	        echo "<a href='../../create.php'><button type='button'>Back</button></a>";
-	        echo "<a href='../../admin.php'><button type='button'>Home</button></a>";
+	        echo "<p>新记录成功创建</p>";
+	        echo "<a href='../../create.php'><button type='button'>回去</button></a>";
+	       
 	    } else {
 	        echo "Error " . $sql . ' ' . $connect->connect_error;
 	    }

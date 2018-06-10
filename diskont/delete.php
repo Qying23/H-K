@@ -26,12 +26,12 @@ if($_GET['id']) {
 </head>
 <body>
 
-	<h3>Do you really want to delete this Product?</h3>
+	<h3>真的想删除吗?</h3>
 
 	<form action="actions/a_delete.php" method="post">
 	    <input type="hidden" name="disId" value="<?php echo $data['disId'] ?>" />
-	    <button type="submit" class="btn">Yes, delete it!</button>
-	    <a href="../admin.php"><button type="button" class="btn">No, go back!</button></a>
+	    <button type="submit" class="btn">是的， 删除!</button>
+	    <a href="../admin.php"><button type="button" class="btn">不要了， 回去!</button></a>
 	</form>
 
 </body>

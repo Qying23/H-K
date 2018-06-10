@@ -28,17 +28,45 @@ if($_GET['id']) {
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style type="text/css">
+        <style type="text/css">
+        body{
+        background-color:#e1f4f5;
+        }
+    
         fieldset {
             margin: auto;
             margin-top: 100px;
-            width: 50%;
+            width: 80%;
+            border: 70px solid white;
+            text-align: left;
+            padding: 8px;
+            background-color: white;
+          }
+        legend{
+            font-size: 25px;
+            text-align: center;
+            color:#0885f1;
         }
 
-        table tr th {
-            padding-top: 20px;
+        label{
+            font-size: 18px;
         }
-    </style>
+        
+        .knopf1{
+            font-size: 17px;
+            border-radius: 5px;
+            width: 60px;
+            margin: 0px 0px 10px 0px;
+            
+        }
+
+        .knopf2{
+            font-size: 17px;
+            border-radius: 5px;
+            width: 100px;
+            margin: 0px 0px 10px 10px;
+        }
+        </style>
 </head>
 <body>
 
@@ -46,33 +74,56 @@ if($_GET['id']) {
     <legend>Update Spielzeug</legend>
 
     <form action="actions/a_update.php" method="post">
-        <table class="btn">
+        
+        <div class="form-group row">
+            <label for="inputEmail3" class="col-sm-2 col-form-label">产品名字</label>
+            <div class="col-sm-10">
+              <input type="text" name="hName"  class="form-control" placeholder="名字" value="<?php echo $data['hName'] ?>">
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="inputEmail3" class="col-sm-2 col-form-label">描述产品</label>
+            <div class="col-sm-10">
+              <input type="text" name="beschreibung" placeholder="描述产品"  class="form-control" value="<?php echo $data['beschreibung'] ?>">
+            </div>
+        </div>
+        
+        <div class="form-group row">
+            <label for="inputEmail3" class="col-sm-2 col-form-label">照片</label>
+            <div class="col-sm-10">
+              <input type="text" name="Foto" placeholder=".jpg/.png"  class="form-control" value="<?php echo $data['Foto'] ?>" >
+            </div>
+        </div>
+        
+        <div class="form-group row">
+            <label for="inputEmail3" class="col-sm-2 col-form-label">老价</label >
+            <div class="col-sm-10">
+              <input type="text" name="alterPreis"  placeholder="老价"  class="form-control" value="<?php echo $data['alterPreis'] ?>" >
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="inputEmail3" class="col-sm-2 col-form-label">新价</label>
+            <div class="col-sm-10">
+              <input type="text" name="neuerPreis"  placeholder="新价"  class="form-control" value="<?php echo $data['neuerPreis'] ?>">
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="form-group">
             <tr>
-                <th>Name</th>
-                <td><input type="text" name="hName" placeholder="Name" value="<?php echo $data['hName'] ?>" /></td>
-            </tr>     
-            <tr>
-                <th>Beschreibung</th>
-                <td><input type="text" name="beschreibung" placeholder="beschreibung" value="<?php echo $data['beschreibung'] ?>" /></td>
+                <input type="hidden" name="sId" value="<?php echo $data['sId']?>"  />
+
+                <td><a href="../admin.php" ><button type="button" class="btn btn-primary col-sm-2 knopf1">回去</button></a></td>
+
+                <td><button type="submit" class="btn btn-warning col-sm-12 knopf2">保存更改</button></td>
+
             </tr>
-            <tr>
-                <th>Foto</th>
-                <td><input type="text" name="Foto" placeholder="Foto" value="<?php echo $data['Foto'] ?>" /></td>
-            </tr>
-            <tr>
-                <th>Alter Preis</th>
-                <td><input type="text" name="alterPreis" placeholder="alterPreis" value="<?php echo $data['alterPreis'] ?>" /></td>
-            </tr>
-            <tr>
-                <th>Neuer Preis</th>
-                <td><input type="text" name="neuerPreis" placeholder="neuer Preis" value="<?php echo $data['neuerPreis'] ?>" /></td>
-            </tr>
-            <tr>
-                <input type="sidden" name="sId" value="<?php echo $data['sId']?>" />
-                <td><button type="submit" class="btn">Save Changes</button></td>
-                <td><a href="../admin.php"><button type="button" class="btn">Back</button></a></td>
-            </tr>
-        </table>
+
+        </div>
+
     </form>
 </fieldset>
 

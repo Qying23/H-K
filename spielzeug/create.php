@@ -13,8 +13,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <style type="text/css">
-        body{
-           	background-color:#e1f4f5;
+    	body{
+  		background-color:#e1f4f5;
 		}
 	
 		fieldset {
@@ -25,16 +25,15 @@
 		    text-align: left;
 		    padding: 8px;
 		    background-color: white;
-		}
-		
+		  }
 		legend{
-			font-size: 40px;
+			font-size: 25px;
 			text-align: center;
 			color:#0885f1;
 		}
 
 		label{
-			font-size: 20px;
+			font-size: 18px;
 		}
 		
 		.knopf1{
@@ -49,9 +48,9 @@
 		    font-size: 17px;
 		    border-radius: 5px;
 		    width: 100px;
-		    margin: 0px 10px 10px 10px;
+		    margin: 0px 0px 10px 10px;
 		}
-    </style>
+		</style>
    
 </head>
 <body>

@@ -43,36 +43,58 @@ if($_GET['id']) {
 <body>
 
 <fieldset>
-    <legend>Update Haushalt</legend>
+    <legend>更新家务用品</legend>
 
     <form action="actions/a_update.php" method="post">
-        <table class="table">
+              <div class="form-group row">
+            <label for="inputEmail3" class="col-sm-2 col-form-label">产品名字</label>
+            <div class="col-sm-10">
+              <input type="text" name="hName"  class="form-control" placeholder="名字" value="<?php echo $data['hName'] ?>">
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="inputEmail3" class="col-sm-2 col-form-label">描述产品</label>
+            <div class="col-sm-10">
+              <input type="text" name="beschreibung" placeholder="描述产品"  class="form-control" value="<?php echo $data['beschreibung'] ?>">
+            </div>
+        </div>
+        
+        <div class="form-group row">
+            <label for="inputEmail3" class="col-sm-2 col-form-label">照片</label>
+            <div class="col-sm-10">
+              <input type="text" name="Foto" placeholder=".jpg/.png"  class="form-control" value="<?php echo $data['Foto'] ?>" >
+            </div>
+        </div>
+        
+        <div class="form-group row">
+            <label for="inputEmail3" class="col-sm-2 col-form-label">老价</label >
+            <div class="col-sm-10">
+              <input type="text" name="alterPreis"  placeholder="老价"  class="form-control" value="<?php echo $data['alterPreis'] ?>" >
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="inputEmail3" class="col-sm-2 col-form-label">新价</label>
+            <div class="col-sm-10">
+              <input type="text" name="neuerPreis"  placeholder="新价"  class="form-control" value="<?php echo $data['neuerPreis'] ?>">
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="form-group">
             <tr>
-                <th>Name</th>
-                <td><input type="text" name="hName" placeholder="Name" value="<?php echo $data['hName'] ?>" /></td>
-            </tr>     
-            <tr>
-                <th>Beschreibung</th>
-                <td><input type="text" name="beschreibung" placeholder="beschreibung" value="<?php echo $data['beschreibung'] ?>" /></td>
+                <input type="hidden" name="hId" value="<?php echo $data['hId']?>"  />
+
+                <td><a href="../admin.php" ><button type="button" class="btn btn-primary col-sm-2 knopf1">回去</button></a></td>
+
+                <td><button type="submit" class="btn btn-warning col-sm-12 knopf2">保存更改</button></td>
+
             </tr>
-            <tr>
-                <th>Foto</th>
-                <td><input type="text" name="Foto" placeholder="Foto" value="<?php echo $data['Foto'] ?>" /></td>
-            </tr>
-            <tr>
-                <th>Alter Preis</th>
-                <td><input type="text" name="alterPreis" placeholder="alterPreis" value="<?php echo $data['alterPreis'] ?>" /></td>
-            </tr>
-            <tr>
-                <th>Neuer Preis</th>
-                <td><input type="text" name="neuerPreis" placeholder="neuer Preis" value="<?php echo $data['neuerPreis'] ?>" /></td>
-            </tr>
-            <tr>
-                <input type="hidden" name="hId" value="<?php echo $data['hId']?>" />
-                <td><button type="submit" class="btn">Save Changes</button></td>
-                <td><a href="../admin.php"><button type="button" class="btn">Back</button></a></td>
-            </tr>
-        </table>
+
+        </div>
+
     </form>
 </fieldset>
 

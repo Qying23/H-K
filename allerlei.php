@@ -110,15 +110,15 @@
             "<div class='col-md-4 col-lg-4 col-4 col'>
               <div class='kard'>
                 <div class='plac_img'>
-                  <img src='img/".$row["Foto"]."' class='images'>
+                  <img src='".$row["Foto"]."' class='images'>
                 </div>
                 <div>
                   <h3>".$row["hName"]."</h3>
                   <p>".$row["beschreibung"]."</p>";
                   if($row["alterPreis"]>0){
-                    echo "<p>".$row["alterPreis"]."</p>
+                    echo "<p>".$row["alterPreis"]."€</p>
                     
-                  <p>".$row["neuerPreis"]."</p>
+                  <p>".$row["neuerPreis"]."€</p>
                 </div>
               </div>
             </div>";

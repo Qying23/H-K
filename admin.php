@@ -76,8 +76,8 @@
 		                        <td>".$row['alterPreis']."</td>
 		                        <td>".$row['neuerPreis']."</td>
 		                        <td>
-		                            <a href='Allerlei/update.php?id=".$row['aId']."'><button type='button' class='btn btn-info'>Edit</button></a>
-		                            <a href='Allerlei/delete.php?id=".$row['aId']."'><button type='button' class='btn btn-danger'>Delete</button></a>
+		                            <a href='Allerlei/update.php?id=".$row['aId']."'><button type='button' class='btn btn-info'>编辑</button></a>
+		                            <a href='Allerlei/delete.php?id=".$row['aId']."'><button type='button' class='btn btn-danger'>删除</button></a>
 		                        </td>
 		                    </tr>";
 		                }
@@ -117,8 +117,8 @@
 		                        <td>".$row['alterPreis']."</td>
 		                        <td>".$row['neuerPreis']."</td>
 		                        <td>
-		                            <a href='Deko/update.php?id=".$row['dId']."'><button type='button' class='btn btn-info'>Edit</button></a>
-		                            <a href='Deko/delete.php?id=".$row['dId']."'><button type='button' class='btn btn-danger'>Delete</button></a>
+		                            <a href='Deko/update.php?id=".$row['dId']."'><button type='button' class='btn btn-info'>编辑</button></a>
+		                            <a href='Deko/delete.php?id=".$row['dId']."'><button type='button' class='btn btn-danger'>删除</button></a>
 		                        </td>
 		                    </tr>";
 		                }
@@ -158,8 +158,8 @@
 		                        <td>".$row['alterPreis']."</td>
 		                        <td>".$row['neuerPreis']."</td>
 		                        <td>
-		                            <a href='diskont/update.php?id=".$row['disId']."'><button type='button' class='btn btn-info'>Edit</button></a>
-		                            <a href='diskont/delete.php?id=".$row['disId']."'><button type='button' class='btn btn-danger'>Delete</button></a>
+		                            <a href='diskont/update.php?id=".$row['disId']."'><button type='button' class='btn btn-info'>编辑</button></a>
+		                            <a href='diskont/delete.php?id=".$row['disId']."'><button type='button' class='btn btn-danger'>删除</button></a>
 		                        </td>
 		                    </tr>";
 		                }
@@ -199,8 +199,8 @@
 		                        <td>".$row['alterPreis']."</td>
 		                        <td>".$row['neuerPreis']."</td>
 		                        <td>
-		                            <a href='haushalt/update.php?id=".$row['hId']."'><button type='button' class='btn btn-info'>Edit</button></a>
-		                            <a href='haushalt/delete.php?id=".$row['hId']."'><button type='button' class='btn btn-danger'>Delete</button></a>
+		                            <a href='haushalt/update.php?id=".$row['hId']."'><button type='button' class='btn btn-info'>编辑</button></a>
+		                            <a href='haushalt/delete.php?id=".$row['hId']."'><button type='button' class='btn btn-danger'>删除</button></a>
 		                        </td>
 		                    </tr>";
 		                }
@@ -240,8 +240,8 @@
 		                        <td>".$row['alterPreis']."</td>
 		                        <td>".$row['neuerPreis']."</td>
 		                        <td>
-		                            <a href='kleidung/update.php?id=".$row['kId']."'><button type='button' class='btn btn-info'>Edit</button></a>
-		                            <a href='kleidung/delete.php?id=".$row['kId']."'><button type='button' class='btn btn-danger'>Delete</button></a>
+		                            <a href='kleidung/update.php?id=".$row['kId']."'><button type='button' class='btn btn-info'>编辑</button></a>
+		                            <a href='kleidung/delete.php?id=".$row['kId']."'><button type='button' class='btn btn-danger'>删除</button></a>
 		                        </td>
 		                    </tr>";
 		                }
@@ -281,8 +281,8 @@
 		                        <td>".$row['alterPreis']."</td>
 		                        <td>".$row['neuerPreis']."</td>
 		                        <td>
-		                            <a href='spielzeug/update.php?id=".$row['sId']."'><button type='button' class='btn btn-info'>Edit</button></a>
-		                            <a href='spielzeug/delete.php?id=".$row['sId']."'><button type='button' class='btn btn-danger'>Delete</button></a>
+		                            <a href='spielzeug/update.php?id=".$row['sId']."'><button type='button' class='btn btn-info'>编辑</button></a>
+		                            <a href='spielzeug/delete.php?id=".$row['sId']."'><button type='button' class='btn btn-danger'>删除</button></a>
 		                        </td>
 		                    </tr>";
 		                }
@@ -322,8 +322,8 @@
 		                        <td>".$row['alterPreis']."</td>
 		                        <td>".$row['neuerPreis']."</td>
 		                        <td>
-		                            <a href='taschen/update.php?id=".$row['tId']."'><button type='button' class='btn btn-info'>Edit</button></a>
-		                            <a href='taschen/delete.php?id=".$row['tId']."'><button type='button' class='btn btn-danger'>Delete</button></a>
+		                            <a href='taschen/update.php?id=".$row['tId']."'><button type='button' class='btn btn-info'>编辑</button></a>
+		                            <a href='taschen/delete.php?id=".$row['tId']."'><button type='button' class='btn btn-danger'>删除</button></a>
 		                        </td>
 		                    </tr>";
 		                }
